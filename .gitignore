@@ -1,0 +1,11 @@
+# ignore .iml
+*.iml
+*.ipr
+*.iws
+.idea/
+hsf/
+target/
+.project
+.classpath
+.settings/
+.metadata/
