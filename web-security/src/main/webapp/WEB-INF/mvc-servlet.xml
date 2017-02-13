@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <!-- this will register RequestMappingHandlerMapping、RequestMappingHandlerAdapter-->
+    <mvc:annotation-driven>
+    </mvc:annotation-driven>
+
+    <context:component-scan base-package="com.fuqiu.spring.mvc.web"/>
+
+    <!-- 配置视图解析器 把控制器返回的字符串解析为/WEB-INFO/views/vm  具体做法就是讲返回的字符串加上你指定的后缀.vm -->
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value="/WEB-INF/views/"/>-->
+        <!--<property name="suffix" value=".vm"/>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash; 配置Velocity视图解析器 &ndash;&gt;-->
+    <!--<bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">-->
+        <!--<property name="cache" value="false"/>-->
+        <!--<property name="order" value="1"/>-->
+        <!--&lt;!&ndash;<property name="prefix" value="/WEB-INF/velocity/"/> 这个配置导致找不到velocity模板文件&ndash;&gt;-->
+        <!--<property name="suffix" value=".vm"/>-->
+        <!--<property name="contentType" value="text/html;charset=UTF-8"/>-->
+        <!--&lt;!&ndash;<property name="toolboxConfigLocation" value="WEB-INF/velocity/toolbox.xml"/>&ndash;&gt;-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash; 配置Velocity引擎 了解velocity find resource的机制&ndash;&gt;-->
+    <!--<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">-->
+        <!--<property name="resourceLoaderPath" value="/WEB-INF/velocity/"/>-->
+        <!--<property name="configLocation" value="/WEB-INF/velocity.properties"/>-->
+    <!--</bean>-->
+
+</beans>

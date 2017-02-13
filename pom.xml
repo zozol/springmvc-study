@@ -15,5 +15,7 @@
         <module>springboot-web</module>
         <module>xml-bean-web</module>
         <module>xml-schema-web</module>
+        <module>servlet-3-web</module>
+        <module>web-security</module>
     </modules>
 </project>
